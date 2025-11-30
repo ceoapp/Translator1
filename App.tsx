@@ -47,9 +47,9 @@ const Header = () => (
   </header>
 );
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+type ButtonProps = React.ComponentPropsWithoutRef<'button'> & {
   variant?: 'primary' | 'secondary' | 'glass' | 'icon';
-}
+};
 
 const Button = ({ 
   onClick, 
