@@ -8,6 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      // Shim for process.env to work in the browser
+      window.process = {
+        env: {
+          API_KEY: 'PLACEHOLDER_API_KEY'
+        }
+      };
+    </script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
       body {
         font-family: 'Inter', sans-serif;
@@ -62,5 +71,6 @@
 </head>
   <body class="bg-slate-900 text-slate-100 antialiased selection:bg-cyan-500/30 selection:text-cyan-100">
     <div id="root"></div>
+    <script type="text/babel" data-presets="react,typescript" src="./index.tsx"></script>
   </body>
 </html>

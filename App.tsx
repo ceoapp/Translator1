@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { translateTextToThai } from './services/geminiService';
-import { TranslationItem } from './types';
+import { translateTextToThai } from './services/geminiService.ts';
+import { TranslationItem } from './types.ts';
 import { 
   ArrowRightIcon, 
   CheckIcon, 
@@ -10,7 +10,7 @@ import {
   XMarkIcon,
   SpeakerIcon,
   SwapIcon
-} from './components/Icons';
+} from './components/Icons.tsx';
 
 // --- Background Components ---
 
@@ -47,7 +47,7 @@ const Header = () => (
   </header>
 );
 
-interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'glass' | 'icon';
 }
 
